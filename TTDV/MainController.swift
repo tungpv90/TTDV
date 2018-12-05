@@ -81,4 +81,5 @@ class MainController: UIViewController {
             }
             selectedView.setNeedsDisplay()
         }
-    }}
+    }
+}
