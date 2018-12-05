@@ -1,10 +1,11 @@
-//
-//  SelectedVIew.swift
-//  TTDV
-//
-//  Created by MD387zp on 11/21/18.
-//  Copyright © 2018 htstudio. All rights reserved.
-//
+﻿/********************************************************************************/
+/* FILE NAME      :SelectedVIew.swift */
+/* PROJECT NAME   : */
+/* OUTLINE        : */
+/* HISTORY        : Ver.1.00 : 2018/12/05 TUNGPV Content    */
+/*				  : Ver.2.00 : */
+/* 				Copyright (C) 2017 TKCC All Rights Reserved.					*/
+/********************************************************************************/
 
 import UIKit
 
@@ -22,13 +23,6 @@ enum PDirection : Int {
 }
 class SelectedVIew: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
     var path: UIBezierPath!
     var pathDirect = PDirection.A1
     var PathDirect:PDirection {
@@ -39,17 +33,43 @@ class SelectedVIew: UIView {
             pathDirect = p
         }
     }
+
+/********************************************************************************/
+/* NAME			:  	*/
+/* FUNCTION		:	*/ 
+/* PARAMETER	: 	*/
+/* RETURN		: 	*/
+/* PROGRAMMED	: 	*/
+/* DATE(ORG)	: 	*/
+/* NOTE			: 	*/
+/********************************************************************************/
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         self.backgroundColor = UIColor.clear
-        createTextLayer()
-        
     }
-    
+
+/********************************************************************************/
+/* NAME			:  	*/
+/* FUNCTION		:	*/ 
+/* PARAMETER	: 	*/
+/* RETURN		: 	*/
+/* PROGRAMMED	: 	*/
+/* DATE(ORG)	: 	*/
+/* NOTE			: 	*/
+/********************************************************************************/
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+/********************************************************************************/
+/* NAME			:  	*/
+/* FUNCTION		:	*/ 
+/* PARAMETER	: 	*/
+/* RETURN		: 	*/
+/* PROGRAMMED	: 	*/
+/* DATE(ORG)	: 	*/
+/* NOTE			: 	*/
+/********************************************************************************/
     override func draw(_ rect: CGRect) {
      
         self.createRectangle()
@@ -64,7 +84,16 @@ class SelectedVIew: UIView {
         path.lineWidth = 5
         
     }
-    
+
+/********************************************************************************/
+/* NAME			:  	*/
+/* FUNCTION		:	*/ 
+/* PARAMETER	: 	*/
+/* RETURN		: 	*/
+/* PROGRAMMED	: 	*/
+/* DATE(ORG)	: 	*/
+/* NOTE			: 	*/
+/********************************************************************************/
     func createRectangle() {
         // Initialize the path.
         path = UIBezierPath()
@@ -100,7 +129,16 @@ class SelectedVIew: UIView {
         }
         
     }
-    
+
+/********************************************************************************/
+/* NAME			:  	*/
+/* FUNCTION		:	*/ 
+/* PARAMETER	: 	*/
+/* RETURN		: 	*/
+/* PROGRAMMED	: 	*/
+/* DATE(ORG)	: 	*/
+/* NOTE			: 	*/
+/********************************************************************************/
     func createTextLayer() {
         let textLayer = CATextLayer()
         textLayer.string = "WOW"

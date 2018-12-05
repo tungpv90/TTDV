@@ -1,10 +1,12 @@
-﻿//
-//  MenuController.swift
-//  TTDV
-//
-//  Created by MD387zp on 11/14/18.
-//  Copyright © 2018 htstudio. All rights reserved.
-//
+﻿/********************************************************************************/
+/* FILE NAME      : MenuController.swift*/
+/* PROJECT NAME   : */
+/* OUTLINE        : */
+/* HISTORY        : Ver.1.00 : 2018/12/05 TUNGPV Content    */
+/*				  : Ver.2.00 : */
+/* 				Copyright (C) 2017 TKCC All Rights Reserved.					*/
+/********************************************************************************/
+
 
 import UIKit
 
