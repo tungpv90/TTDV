@@ -12,6 +12,18 @@ import UIKit
 
 class CircleView: UIView {
 
+    var x: Int
+    var y: Int
+    var w: Int
+    var h: Int
+    
+    init(x: Int, y: Int, w: Int, h: Int) {
+        self.x = x
+        self.y = y
+        self.w = w
+        self.h = h
+    }
+
 /********************************************************************************/
 /* NAME			:  	*/
 /* FUNCTION		:	Draw a circle*/ 

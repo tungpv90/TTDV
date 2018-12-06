@@ -69,4 +69,25 @@ class MainController: UIViewController {
             selectedView.setNeedsDisplay()
         }
     }
+
+/********************************************************************************/
+/* NAME			:  	*/
+/* FUNCTION		:	*/ 
+/* PARAMETER	: 	*/
+/* RETURN		: 	*/
+/* PROGRAMMED	: 	*/
+/* DATE(ORG)	: 	*/
+/* NOTE			: 	*/
+/********************************************************************************/
+    func checkResult(x: Int, y: Int)->Bool {
+
+        var xC = circleView.x
+        var yC = circleView.y
+        var wC = circleView.w
+        var hC = circleView.h
+        if (x > xC && x < xC + wC && y > yC && y < yC + w ) {
+            return true
+        }
+        return false 
+    }
 }
