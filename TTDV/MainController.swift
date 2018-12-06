@@ -12,6 +12,7 @@ class MainController: UIViewController {
     @IBOutlet weak var circleView: CircleView! 
     @IBOutlet weak var selectedView: SelectedVIew!
     @IBOutlet weak var mainView: UIView!
+    var delegate : MealDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad() 
