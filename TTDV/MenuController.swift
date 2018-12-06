@@ -10,7 +10,21 @@
 
 import UIKit
 
-class MenuController: UIViewController {
+/********************************************************************************/
+/* NAME			:  	*/
+/* FUNCTION		:	*/
+/* PARAMETER	: 	*/
+/* RETURN		: 	*/
+/* PROGRAMMED	: 	*/
+/* DATE(ORG)	: 	*/
+/* NOTE			: 	*/
+/********************************************************************************/
+protocol MealDelegate {
+    func returnChecked()
+}
+
+
+class MenuController: UIViewController, MealDelegate {
 
 	var meals1 = [Meal]()
 	var meals2 = [Meal]()
@@ -53,6 +67,23 @@ class MenuController: UIViewController {
 /* DATE(ORG)	: 	*/
 /* NOTE			: 	*/
 /********************************************************************************/
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "MenuToMain" {
+            let vc : MainViewController = segue.destination as! MainViewController
+            vc.delegate = self
+        }
+    }
+/********************************************************************************/
+/* NAME			:  	*/
+/* FUNCTION		:	*/
+/* PARAMETER	: 	*/
+/* RETURN		: 	*/
+/* PROGRAMMED	: 	*/
+/* DATE(ORG)	: 	*/
+/* NOTE			: 	*/
+/********************************************************************************/
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -69,5 +100,18 @@ class MenuController: UIViewController {
 /********************************************************************************/
     @IBAction func OnQuestionClicked(_ sender: Any) {
         performSegue(withIdentifier: "MenuToMain", sender: self)
+    }
+
+/********************************************************************************/
+/* NAME			:  	*/
+/* FUNCTION		:	*/
+/* PARAMETER	: 	*/
+/* RETURN		: 	*/
+/* PROGRAMMED	: 	*/
+/* DATE(ORG)	: 	*/
+/* NOTE			: 	*/
+/********************************************************************************/
+    func returnChecked() {
+        
     }
 }
